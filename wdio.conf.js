@@ -23,7 +23,7 @@ exports.config = {
                 '--disable-dev-shm-usage',
                 '--disable-infobars'
             ]
-        },
+        }, 
         "moz:firefoxOptions": {
             // flag to activate Firefox headless mode (see https://github.com/mozilla/geckodriver/blob/master/README.md#firefox-capabilities for more details about moz:firefoxOptions)
             args: [
@@ -33,7 +33,6 @@ exports.config = {
     }],
     logLevel: 'warn',
     bail: 0,
-    // baseUrl: 'ADRESA TESTOVANE APLIKACE',
     baseUrl: 'http://185.155.129.106',
     waitforTimeout: 10000,
     connectionRetryTimeout: 120000,
