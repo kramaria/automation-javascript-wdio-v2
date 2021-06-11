@@ -1,4 +1,4 @@
-import VoucherPageUkol from '../../pageobjects/voucher.page.js'
+import VoucherPageUkol from '../pageobjects/voucher.homework.page.js'
 
 describe('Voucher Registration Page - excercise 5', () => {
 
@@ -6,8 +6,8 @@ describe('Voucher Registration Page - excercise 5', () => {
         firstName: 'Anička',
         lastName: 'Testerka',
         subscriptionLength: 3,
-        birthDate: '26.4.1990',
-        email: 'anicka.testerka@czechitas.cz'
+        birthDate: '04/26/1990',
+        email: 'anicka.test@czechitas.cz'
     }
 
     beforeEach(() => {
@@ -35,11 +35,11 @@ describe('Voucher Registration Page - excercise 5', () => {
     describe('Price by subscription length', () => {
 
         const testCases = [
-            { ...formData, subscriptionLength: 3, price: '1000 Kč', code: 'QWFUYTE5OTAwNDI2M2FhY3' },
-            { ...formData, subscriptionLength: 7, price: '950 Kč', code: 'QWFUYTE5OTAwNDI2N2FhY3' },
-            { ...formData, subscriptionLength: 14, price: '850 Kč', code: 'QWFUYTE5OTAwNDI2MTRhYW' },
-            { ...formData, subscriptionLength: 21, price: '650 Kč', code: 'QWFUYTE5OTAwNDI2MjFhYW' },
-            { ...formData, subscriptionLength: 120, price: '650 Kč', code: 'QWFUYTE5OTAwNDI2MTIwYWFjeg' },
+            { ...formData, subscriptionLength: 3, price: '1000 Kč', code: 'QWFUYTE5OTAwNDI2M2F0Y3' },
+            { ...formData, subscriptionLength: 7, price: '950 Kč', code: 'QWFUYTE5OTAwNDI2N2F0Y3' },
+            { ...formData, subscriptionLength: 14, price: '850 Kč', code: 'QWFUYTE5OTAwNDI2MTRhdG' },
+            { ...formData, subscriptionLength: 21, price: '650 Kč', code: 'QWFUYTE5OTAwNDI2MjFhdG' },
+            { ...formData, subscriptionLength: 120, price: '650 Kč', code: 'QWFUYTE5OTAwNDI2MTIwYXRjeg' },
             // { ...formData, subscriptionLength: 0, price: '', code: '' },
             // { ...formData, subscriptionLength: -1, price: '', code: '' },
             // { ...formData, subscriptionLength: 5.5, price: '', code: '' },
@@ -64,18 +64,18 @@ describe('Voucher Registration Page - excercise 5', () => {
 
         const testCases = [
             
-            { ...formData, birthDate: '6.6.2021', price: '850 Kč', code: 'QWFUYTIwMjEwNjA2M2FhY3' },
-            { ...formData, birthDate: '26.4.2000', price: '850 Kč', code: 'QWFUYTIwMDAwNDI2M2FhY3' },
-            { ...formData, birthDate: '26.4.1990', price: '1000 Kč', code: 'QWFUYTE5OTAwNDI2M2FhY3' },
-            { ...formData, birthDate: '7.5.1966', price: '1000 Kč', code: 'QWFUYTE5NjYwNzA2M2FhY3' },
-            { ...formData, birthDate: '26.4.1960', price: '750 Kč', code: 'QWFUYTE5NjAwNDI2M2FhY3' },
-            { ...formData, birthDate: '6.6.1921', price: '750 Kč', code: 'QWFUYTE5MjEwNjA2M2FhY3' },
-            { ...formData, birthDate: '6.6.1997', price: '850 Kč', code: 'QWFUYTE5OTcwNjA2M2FhY3' },
-            { ...formData, birthDate: '8.6.1996', price: '850 Kč', code: 'QWFUYTE5OTYwNjA4M2FhY3' },
-            { ...formData, birthDate: '7.6.1996', price: '1000 Kč', code: 'QWFUYTE5OTYwNjA3M2FhY3' },
-            { ...formData, birthDate: '7.6.1966', price: '1000 Kč', code: 'QWFUYTE5OTYwNjA3M2FhY3' },
-            { ...formData, birthDate: '8.6.1965', price: '1000 Kč', code: 'QWFUYTE5NjYwNzA2M2FhY3' },
-            { ...formData, birthDate: '7.6.1966', price: '850 Kč', code: 'QWFUYTE5NjYwNjA3M2FhY3' },
+            { ...formData, birthDate: '06/06/2021', price: '850 Kč', code: 'QWFUYTIwMjEwNjA2M2F0Y3' },
+            { ...formData, birthDate: '04/26/2000', price: '850 Kč', code: 'QWFUYTIwMDAwNjI2M2F0Y3' },
+            { ...formData, birthDate: '04/26/1990', price: '1000 Kč', code: 'QWFUYTE5OTAwNDI2M2F0Y3' },
+            { ...formData, birthDate: '05/07/1966', price: '1000 Kč', code: 'QWFUYTE5NjYwNTA3M2F0Y3' },
+            { ...formData, birthDate: '04/26/1960', price: '750 Kč', code: 'QWFUYTE5NjAwNDI2M2F0Y3' },
+            { ...formData, birthDate: '06/06/1921', price: '750 Kč', code: 'QWFUYTE5MjEwNjA2M2F0Y3' },
+            { ...formData, birthDate: '06/06/1997', price: '850 Kč', code: 'QWFUYTE5OTcwNjA2M2F0Y3' },
+            { ...formData, birthDate: '06/08/1996', price: '850 Kč', code: 'QWFUYTE5OTYwNjA4M2F0Y3' },
+            { ...formData, birthDate: '06/07/1996', price: '1000 Kč', code: 'QWFUYTE5OTYwNjA3M2F0Y3' },
+            { ...formData, birthDate: '06/07/1966', price: '1000 Kč', code: 'QWFUYTE5NjYwNjA3M2F0Y3' },
+            { ...formData, birthDate: '06/08/1965', price: '1000 Kč', code: 'QWFUYTE5NjUwNjA4M2F0Y3' },
+            { ...formData, birthDate: '06/07/1966', price: '850 Kč', code: 'QWFUYTE5NjYwNjA3M2F0Y3' },
         ]
 
         testCases.forEach( testCase => {

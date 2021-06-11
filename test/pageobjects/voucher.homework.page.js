@@ -34,4 +34,4 @@ class VoucherPageUkol {
   }
 }
 
-module.exports = new VoucherPage();
+module.exports = new VoucherPageUkol();
